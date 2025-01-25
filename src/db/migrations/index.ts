@@ -8,6 +8,8 @@ import { FixReaderEntity1735853448078 } from './1735853448078-FixReaderEntity';
 import { AddReturnDateColumnToBorrowings1735925104482 } from './1735925104482-AddReturnDateColumnToBorrowings';
 import { AddCoverImageToBookEntity1735995065986 } from './1735995065986-AddCoverImageToBookEntity';
 import { AddedCascadeDelete1736543815449 } from './1736543815449-AddedCascadeDelete';
+import { AddedCascadeDeleteToEmployees1737824670365 } from './1737824670365-AddedCascadeDeleteToEmployees';
+import { AddedCascadeDeleteToBorrowingsEmployee1737824809783 } from './1737824809783-AddedCascadeDeleteToBorrowingsEmployee';
 
 require('dotenv').config();
 export default [
@@ -21,4 +23,6 @@ export default [
   AddReturnDateColumnToBorrowings1735925104482,
   AddCoverImageToBookEntity1735995065986,
   AddedCascadeDelete1736543815449,
+  AddedCascadeDeleteToEmployees1737824670365,
+  AddedCascadeDeleteToBorrowingsEmployee1737824809783,
 ];

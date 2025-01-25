@@ -19,9 +19,13 @@ export class Pracownik {
   @Column({ type: 'number', nullable: true })
   pensja: number;
 
-  @ManyToOne(() => Stanowisko, (stanowisko) => stanowisko.pracownicy)
+  @ManyToOne(() => Stanowisko, (stanowisko) => stanowisko.pracownicy, {
+    onDelete: 'CASCADE',
+  })
   stanowisko: Stanowisko;
 
-  @OneToMany(() => Wypozyczenie, (wypozyczenie) => wypozyczenie.pracownik)
+  @OneToMany(() => Wypozyczenie, (wypozyczenie) => wypozyczenie.pracownik, {
+    onDelete: 'CASCADE',
+  })
   wypozyczenia: Wypozyczenie[];
 }

@@ -18,7 +18,9 @@ export class Wypozyczenie {
   })
   ksiazka: Ksiazka;
 
-  @ManyToOne(() => Pracownik, (pracownik) => pracownik.wypozyczenia)
+  @ManyToOne(() => Pracownik, (pracownik) => pracownik.wypozyczenia, {
+    onDelete: 'CASCADE',
+  })
   pracownik: Pracownik;
 
   @Column({ type: 'date', nullable: true })
